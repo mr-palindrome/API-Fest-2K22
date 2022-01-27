@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 //Connect to the database
 mongoose.connect(
-  "mongodb+srv://test:test@contacts.gcf0q.mongodb.net/APIFest?retryWrites=true&w=majority",
+  "mongodb+srv://test:test1@contacts.gcf0q.mongodb.net/APIFest?retryWrites=true&w=majority",
   (err) => {
     if (err) console.log("DB Connection Error ", err);
     else console.log("DB Connection Succeeded");
