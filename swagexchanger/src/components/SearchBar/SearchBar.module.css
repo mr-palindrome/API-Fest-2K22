@@ -1,0 +1,25 @@
+.containerbody {
+  height: 200px;
+  background: #8c6a03;
+}
+.searchbar {
+  height: 69px;
+
+  background: #f2dd72 !important;
+  border-radius: 30px;
+
+  flex-grow: 2;
+}
+.searchform {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  margin: auto;
+  padding-top: 3%;
+  position: relative;
+}
+.searchimage {
+  position: absolute;
+  right: 5%;
+  padding-top: 4%;
+}
