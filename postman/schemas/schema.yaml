@@ -1,57 +1,75 @@
 openapi: 3.0.0
 info:
-  version: 'v1'
-  title: 'Test v1'
+  version: "1.0.0"
+  title: "Swag Exchange API"
 servers:
-  - url: 'localhost:3000'
+  - url: "localhost:3000"
 paths:
-  /user:
+  /swags:
     get:
-      summary: 'Sample endpoint: Returns details about a particular user test'
-      operationId: listUser
+      summary: List of All Swags
+      operationId: getSwags
       tags:
-        - user
-      parameters:
-        - name: id
-          in: query
-          description: ID of the user
-          required: true
-          schema:
-            type: integer
-            format: int32
+        - Swag
       responses:
-        '200':
-          description: 'Sample response: Details about a user by ID'
-          headers:
-            x-next:
-              description: A link to the next page of responses
-              schema:
-                type: string
+        "200":
+          description: Swag
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
-        default:
-          description: Unexpected error
+                $ref: "#/components/schemas/SwagListing"
+    post:
+      summary: Swag
+      operationId: addSwag
+      tags:
+        - Restaurant
+      requestBody:
+        required: true
+        description: Swag
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Swag"
+      responses:
+        "201":
+          description: Swag
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Swag"
 components:
   schemas:
-    User:
+    SwagListing:
+      type: array
+      items:
+        $ref: "#/components/schemas/Swag"
+    Swag:
       type: object
       required:
-        - id
         - name
+        - image
+        - owner
+        - details
+        - status
       properties:
         id:
+          description: Unique identifier for the swag
           type: integer
-          format: int64
         name:
+          description: The name of the Swag.
           type: string
-        tag:
+        image:
+          description: The image url of the swag.
           type: string
+        owner:
+          description: The Owner who owns the swag.
+          type: string
+        details:
+          description: Details about the Swag.
+          type: string
+        status:
+          description: Whether it is available or getting exchanged
+          type: boolean
     Error:
       type: object
       required:
