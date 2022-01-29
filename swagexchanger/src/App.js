@@ -1,8 +1,10 @@
 import { React, useEffect } from "react";
 import "./App.css";
+import { Row, Col } from "react-bootstrap";
 import { Header } from "./components/NavBar/Header";
 import { SearchBar } from "./components/SearchBar/SearchBar";
 import { Posts } from "./components/Posts/Posts";
+import { SwagForm } from "./components/Form/Form";
 
 const App = () => {
   /*useEffect(() => {
@@ -19,7 +21,14 @@ const App = () => {
     <div className="App">
       <Header />
       <SearchBar />
-      <Posts />
+      <Row>
+        <Col sm={8}>
+          <Posts />
+        </Col>
+        <Col sm={4}>
+          <SwagForm />
+        </Col>
+      </Row>
     </div>
   );
 };
