@@ -1,7 +1,16 @@
 import React from "react";
 import "./SwagCard.css";
 
-export const SwagCard = ({ details, image, name, owner, category, status }) => {
+export const SwagCard = ({
+  details,
+  image,
+  name,
+  owner,
+  category,
+  status,
+  size,
+  count,
+}) => {
   return (
     <div className="swag-card">
       <div className="badge">{status}</div>
@@ -13,8 +22,8 @@ export const SwagCard = ({ details, image, name, owner, category, status }) => {
         <h4>{name}</h4>
         <p>{details}</p>
         <div>
-          <span className="swag-txt">SIZE: </span>
-          <span className="swag-txt">QUANTITY: </span>
+          <span className="swag-txt">SIZE: {size}</span>
+          <span className="swag-txt">QUANTITY:{count} </span>
         </div>
         <span className="swag-category">OWNER:</span>
         <span className="swag-txt">{owner}</span>

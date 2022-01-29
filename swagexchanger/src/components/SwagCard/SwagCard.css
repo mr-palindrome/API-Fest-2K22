@@ -1,89 +1,87 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
 
-a
-{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 .swag-card {
-    width: 300px;
-    position: relative;
-    box-shadow: 0 2px 7px #dfdfdf;
-    margin: 50px auto;
-    background: #fafafa;
+  width: 300px;
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  margin: 50px auto;
+  background: #fafafa;
 }
 
 .badge {
-    position: absolute;
-    left: 0;
-    top: 20px;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 700;
-    background: black;
-    color: #fff;
-    padding: 3px 10px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  background: black;
+  color: #fff;
+  padding: 3px 10px;
 }
 
 .swag-tumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    padding: 50px;
-    background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  padding: 5px;
+  background: #f0f0f0;
 }
 
 .swag-tumb img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .swag-details {
-    padding: 20px;
-    background: #F2E638;
+  padding: 20px;
+  background: #f2e638;
 }
-.swag-details div{
-    display: grid;
-    grid-template-columns: auto auto;
-    background: #F2E638;
-    margin-bottom: 10px;
+.swag-details div {
+  display: grid;
+  grid-template-columns: auto auto;
+  background: #f2e638;
+  margin-bottom: 10px;
 }
-
 
 .swag-catagory {
-    display: block;
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: rgb(73, 71, 71);
-    margin-bottom: 10px;
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(73, 71, 71);
+  margin-bottom: 10px;
 }
-.swag-txt{
-    display: block;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: black;
+.swag-txt {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: black;
 }
-.swag-details h4{
-    font-weight: 500;
-    display: block;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: #000000;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 18px;
-    font-weight: 1000;
+.swag-details h4 {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: 1000;
 }
 
 .swag-details h4:hover {
-    color: #8d8d8d;
+  color: #8d8d8d;
 }
 
 .swag-details p {
-    font-size: 15px;
-    line-height: 22px;
-    margin-bottom: 18px;
-    color: rgb(0, 0, 0);
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 18px;
+  color: rgb(0, 0, 0);
 }

@@ -21,10 +21,13 @@ export const Posts = () => {
       {swagsData.map((d) => (
         <SwagCard
           key={d._id}
-          details={d.details}
+          details={d.description}
           image={d.image}
           owner={d.owner}
           name={d.name}
+          size={d.size}
+          count={d.count}
+          category={d.category}
         />
       ))}
     </div>

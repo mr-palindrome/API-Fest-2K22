@@ -1,4 +1,4 @@
-import { React, useState, useRef } from "react";
+import { React, useState, useRef, useEffect } from "react";
 import axios from "axios";
 
 export const SwagForm = () => {
@@ -10,6 +10,7 @@ export const SwagForm = () => {
   const ownerRef = useRef();
   const categoryRef = useRef();
   const imageRef = useRef();
+
   const createPost = (event) => {
     event.preventDefault();
     const name = nameRef.current.value;
