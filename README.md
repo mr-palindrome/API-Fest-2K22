@@ -24,7 +24,7 @@
   <img src="https://user-images.githubusercontent.com/52382282/151652474-de6574a0-4583-4816-9070-18a06fff631a.png" alt="drawing" width="800"/>
 
 - ### Swag Form!
-  <img src="https://user-images.githubusercontent.com/52382282/151652531-1707b8ce-237c-40cc-8914-bedfb558cf33.png" alt="drawing" width="800"/>
+  <img src="https://user-images.githubusercontent.com/52382282/151652531-1707b8ce-237c-40cc-8914-bedfb558cf33.png" alt="drawing" width="600" height="600"/>
 
 
 
@@ -45,9 +45,9 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/J0SAL/API-Fest-2K22.git
+git clone https://github.com/mr-palindrome/API-Fest-2K22.git
 # Go into the repository
-cd City-Waste-Management
+cd API-Fest-2K22
 # Install dependencies
 npm install
 # Run the app
