@@ -11,6 +11,12 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+
+// var corsOptions = {
+//   origin: '*',
+//   optionsSuccessStatus: 200
+// }
+// app.use(cors(corsOptions))
 app.use(cors());
 
 app.use("/swags", require("./components/routes/swags"));
