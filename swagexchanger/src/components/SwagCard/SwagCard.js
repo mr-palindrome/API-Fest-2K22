@@ -1,7 +1,7 @@
 import React from "react";
-import './SwagCard.css';
+import "./SwagCard.css";
 
-function SwagCard(props) {
+export const SwagCard = (props) => {
   return (
     <div class="swag-card">
       <div class="badge">{props.status}</div>
@@ -13,14 +13,12 @@ function SwagCard(props) {
         <h4>{props.title}</h4>
         <p>{props.description}</p>
         <div>
-          <span class="swag-txt" >SIZE: {props.size}</span>
-          <span class="swag-txt" >QUANTITY: {props.quantity}</span>
+          <span class="swag-txt">SIZE: {props.size}</span>
+          <span class="swag-txt">QUANTITY: {props.quantity}</span>
         </div>
-        <span class="swag-category" >OWNER:</span>
+        <span class="swag-category">OWNER:</span>
         <span class="swag-txt">{props.ownerName}</span>
       </div>
     </div>
-  )
-}
-
-export default SwagCard;
+  );
+};
