@@ -1,0 +1,414 @@
+{
+    "info": {
+        "_postman_id": "e02cb80a-95d0-40d2-9cef-a51b6135a0e0",
+        "name": "API",
+        "description": "This is an API for managing the inventory of Swags.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "swags",
+            "item": [
+                {
+                    "name": "{id}",
+                    "item": [
+                        {
+                            "name": "Swag",
+                            "id": "86cd5901-c7a7-4440-9b63-2525a57d2b94",
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            },
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/swags/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "swags",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "value": "61f4d851092df0386c2be78e",
+                                            "description": "(Required) The unique id."
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "6835971b-3595-4233-8b20-3c8b18f6cd4c",
+                                    "name": "Swag",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: basic",
+                                                "key": "Authorization",
+                                                "value": "Basic <credentials>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/swags/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "swags",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "do",
+                                                    "description": "(Required) The unique id."
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n \"name\": \"aute qui ea ad\",\n \"description\": \"occaecat dolore esse do\",\n \"size\": \"ad laboris\",\n \"count\": \"ad incididunt in\",\n \"owner\": \"dolor elit\",\n \"category\": \"ex sint ex\",\n \"image\": \"consequat\",\n \"id\": \"consectetur commodo ipsum incididunt\"\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Swag",
+                            "id": "9aefea2e-1f90-404f-b465-67cac11b5d5d",
+                            "request": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"aute qui ea ad\",\n    \"description\": \"occaecat dolore esse do\",\n    \"size\": \"ad laboris\",\n    \"count\": \"ad incididunt in\",\n    \"owner\": \"dolor elit\",\n    \"category\": \"ex sint ex\",\n    \"image\": \"consequat\",\n    \"id\": \"consectetur commodo ipsum incididunt\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/swags/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "swags",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "99c56002-6a88-45ec-a0af-d9f6c40f8765",
+                                            "key": "id",
+                                            "value": "do",
+                                            "description": "(Required) The unique id."
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "9038bdeb-426e-483e-9d4e-55918faca2a9",
+                                    "name": "Swag",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: basic",
+                                                "key": "Authorization",
+                                                "value": "Basic <credentials>"
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n    \"name\": \"aute qui ea ad\",\n    \"description\": \"occaecat dolore esse do\",\n    \"size\": \"ad laboris\",\n    \"count\": \"ad incididunt in\",\n    \"owner\": \"dolor elit\",\n    \"category\": \"ex sint ex\",\n    \"image\": \"consequat\",\n    \"id\": \"consectetur commodo ipsum incididunt\"\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/swags/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "swags",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "do",
+                                                    "description": "(Required) The unique id."
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "No Content",
+                                    "code": 204,
+                                    "_postman_previewlanguage": "text",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "text/plain"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": ""
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Swag",
+                            "id": "51db6479-648e-4d5f-98ab-e8ada638c5af",
+                            "request": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/swags/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "swags",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "c5be062e-7571-4cec-880c-e26fed362cb0",
+                                            "key": "id",
+                                            "value": "do",
+                                            "description": "(Required) The unique id."
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "d7114683-f5fc-4d17-8c04-690a44e71a5e",
+                                    "name": "Swag",
+                                    "originalRequest": {
+                                        "method": "DELETE",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: basic",
+                                                "key": "Authorization",
+                                                "value": "Basic <credentials>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/swags/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "swags",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "do",
+                                                    "description": "(Required) The unique id."
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "No Content",
+                                    "code": 204,
+                                    "_postman_previewlanguage": "text",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "text/plain"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "a34b3225-a691-4a4b-a2ca-709c3226f530"
+                },
+                {
+                    "name": "Swags",
+                    "id": "74bf7931-71e2-482d-9503-6fdea5058cfb",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/swags",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "swags"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "26b8a6e5-73be-4c59-a9b1-ecb4d4de95b0",
+                            "name": "Swag",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/swags",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "swags"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n {\n  \"name\": \"exercitation qui reprehenderit\",\n  \"description\": \"magna cupidatat\",\n  \"size\": \"do\",\n  \"count\": \"adipisicing aute Duis\",\n  \"owner\": \"Duis\",\n  \"category\": \"nostrud\",\n  \"image\": \"Excepteur qui\",\n  \"id\": \"laborum laboris ea dolore\"\n },\n {\n  \"name\": \"officia\",\n  \"description\": \"ex est Excepteur consectetur\",\n  \"size\": \"ea do\",\n  \"count\": \"minim mollit\",\n  \"owner\": \"ipsum exercitation\",\n  \"category\": \"do fugiat ex dolor amet\",\n  \"image\": \"deserunt do\",\n  \"id\": \"incididunt exercitation quis est\"\n }\n]"
+                        }
+                    ]
+                },
+                {
+                    "name": "Swag",
+                    "id": "5c80281d-1407-48f5-b291-5655069a87fa",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"aute qui ea ad\",\n    \"description\": \"occaecat dolore esse do\",\n    \"size\": \"ad laboris\",\n    \"count\": \"ad incididunt in\",\n    \"owner\": \"dolor elit\",\n    \"category\": \"ex sint ex\",\n    \"image\": \"consequat\",\n    \"id\": \"consectetur commodo ipsum incididunt\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/swags",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "swags"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "50109772-7425-41f4-8dcd-cf4a34a2817b",
+                            "name": "Swag",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"aute qui ea ad\",\n    \"description\": \"occaecat dolore esse do\",\n    \"size\": \"ad laboris\",\n    \"count\": \"ad incididunt in\",\n    \"owner\": \"dolor elit\",\n    \"category\": \"ex sint ex\",\n    \"image\": \"consequat\",\n    \"id\": \"consectetur commodo ipsum incididunt\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/swags",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "swags"
+                                    ]
+                                }
+                            },
+                            "status": "Created",
+                            "code": 201,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"name\": \"aute qui ea ad\",\n \"description\": \"occaecat dolore esse do\",\n \"size\": \"ad laboris\",\n \"count\": \"ad incididunt in\",\n \"owner\": \"dolor elit\",\n \"category\": \"ex sint ex\",\n \"image\": \"consequat\",\n \"id\": \"consectetur commodo ipsum incididunt\"\n}"
+                        }
+                    ]
+                }
+            ],
+            "id": "b7927a2e-76fe-4933-9368-71667d5a069d"
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "id": "2bea7988-c0c5-46be-8c0f-6f7f5b2b22ff",
+            "key": "baseUrl",
+            "value": "https://schwagx.herokuapp.com",
+            "type": "string"
+        }
+    ]
+}

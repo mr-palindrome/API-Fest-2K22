@@ -4,7 +4,7 @@ info:
   title: Swags
   description: "This is an API for managing the inventory of Swags."
 servers:
-  - url: "https://schwagx.herokuapp.com/"
+  - url: "https://schwagx.herokuapp.com"
 paths:
   /swags:
     get:
