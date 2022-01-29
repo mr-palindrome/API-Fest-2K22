@@ -1,10 +1,32 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import { SwagCard } from "../SwagCard/SwagCard";
+import css from "./Posts.module.css";
+import axios from "axios";
 
 export const Posts = () => {
+  const [swagsData, setSwagsData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://schwagx.herokuapp.com/swags/")
+      .then((res) => {
+        console.log(res.data);
+        setSwagsData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
-    <div>
-      <SwagCard />
+    <div className={css.items}>
+      {swagsData.map((d) => (
+        <SwagCard
+          key={d._id}
+          details={d.details}
+          image={d.image}
+          owner={d.owner}
+          name={d.name}
+        />
+      ))}
     </div>
   );
 };

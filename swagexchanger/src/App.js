@@ -3,19 +3,18 @@ import "./App.css";
 import { Header } from "./components/NavBar/Header";
 import { SearchBar } from "./components/SearchBar/SearchBar";
 import { Posts } from "./components/Posts/Posts";
-import axios from "axios";
 
 const App = () => {
-  useEffect(() => {
+  /*useEffect(() => {
     axios
-      .get("http://localhost:3000")
+      .get("https://schwagx.herokuapp.com/swags/")
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, []);*/
   return (
     <div className="App">
       <Header />
