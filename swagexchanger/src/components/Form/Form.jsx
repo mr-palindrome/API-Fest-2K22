@@ -1,5 +1,6 @@
 import { React, useState, useRef, useEffect } from "react";
 import axios from "axios";
+import "./Form.css";
 
 export const SwagForm = () => {
   const [posts, setPosts] = useState([]);
@@ -42,78 +43,47 @@ export const SwagForm = () => {
 
   return (
     <>
-      <form onSubmit={createPost}>
-        <label htmlFor="name-input">Name</label>
-        <input
-          id="name-input"
-          type="text"
-          name="Name"
-          placeholder="Enter Swag Name"
-          ref={nameRef}
-        />
-        <br />
-        <br />
-        <label htmlFor="description-input">Description</label>
-        <input
-          id="description-input"
-          name="Description"
-          placeholder="Enter Swag Description"
-          type="textarea"
-          ref={descriptionRef}
-        />
-        <br />
-        <br />
-        <label htmlFor="size-input">Size</label>
-        <input
-          id="size-input"
-          name="Size"
-          placeholder="Enter Swag Size"
-          type="text"
-          ref={sizeRef}
-        />
-        <br />
-        <br />
-        <label htmlFor="count-input">Count</label>
-        <input
-          id="count-input"
-          name="Size"
-          placeholder="Enter Swag Count"
-          type="number"
-          ref={countRef}
-        />
-        <br />
-        <br />
-        <label htmlFor="owner-input">Owner</label>
-        <input
-          id="owner-input"
-          name="Owner"
-          placeholder="Enter Swag Owner"
-          type="text"
-          ref={ownerRef}
-        />
-        <br />
-        <br />
-        <label htmlFor="category-input">Category</label>
-        <input
-          id="category-input"
-          name="Category"
-          placeholder="Enter Swag Category"
-          type="text"
-          ref={categoryRef}
-        />
-        <br />
-        <br />
-        <label htmlFor="count-input">Image</label>
-        <input
-          id="image-input"
-          name="Image"
-          placeholder="Enter Swag Image"
-          type="text"
-          ref={imageRef}
-        />
-        <br />
-        <br />
-        <button type="submit">Create Post</button>
+      <form class="form" onSubmit={createPost}>
+        <div class="title">Welcome</div>
+        <div class="subtitle">Swag Form</div>
+        <div class="input-container ic1">
+          <input id="name" class="input" type="text" placeholder=" " ref={nameRef} />
+          <div class="cut"></div>
+          <label class="placeholder" htmlFor="name-input">Name</label>
+        </div>
+        <div class="input-container ic1">
+          <input id="name" class="input" type="textarea" placeholder=" " ref={descriptionRef} />
+          <div class="cut"></div>
+          <label htmlFor="description-input" class="placeholder" htmlFor="name-input">Swag Description</label>
+        </div>
+        <div class="input-container ic1">
+          <input id="name" class="input" type="textarea" placeholder=" " ref={sizeRef} />
+          <div class="cut"></div>
+          <label htmlFor="size-input" class="placeholder">Enter Swag Size</label>
+        </div>
+        <div class="input-container ic1">
+          <input id="name" class="input" type="number" placeholder=" " ref={countRef} />
+          <div class="cut"></div>
+          <label htmlFor="count-input" class="placeholder">Enter Swag Count</label>
+        </div>
+        <div class="input-container ic1">
+          <input id="name" class="input" type="textarea" placeholder=" " ref={ownerRef} />
+          <div class="cut"></div>
+          <label htmlFor="owner-input" class="placeholder">Enter Swag Owner</label>
+        </div>
+        <div class="input-container ic1">
+          <input id="name" class="input" type="textarea" placeholder=" " ref={categoryRef} />
+          <div class="cut"></div>
+          <label htmlFor="count-input" class="placeholder">Enter Swag Category</label>
+        </div>
+        <div class="input-container ic1">
+          <input id="name" class="input" type="textarea" placeholder=" " ref={imageRef} />
+          <div class="cut"></div>
+          <label htmlFor="count-input" class="placeholder">Enter Swag Image</label>
+        </div>
+
+
+        <button type="submit" class="submit">Create Post</button>
       </form>
     </>
   );
