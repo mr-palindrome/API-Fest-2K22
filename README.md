@@ -11,7 +11,7 @@
  	
   
 ## Video Link
-  
+  https://www.youtube.com/watch?v=i53xNEr6R7w
 
 ## Postman Workspace
   https://www.postman.com/galactic-zodiac-388067/workspace/galaxia-api-fest-22
