@@ -1,0 +1,154 @@
+openapi: 3.0.0
+info:
+  version: v1.0.0
+  title: Swags
+  description: "This is an API for managing the inventory of Swags."
+servers:
+  - url: "https://schwagx.herokuapp.com"
+paths:
+  /swags:
+    get:
+      summary: Swags
+      operationId: getSwags
+      tags:
+        - Swag
+      responses:
+        "200":
+          description: Swag
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SwagListing"
+    post:
+      summary: Swag
+      operationId: addSwag
+      tags:
+        - Swag
+      requestBody:
+        required: true
+        description: Swag
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Swag"
+      responses:
+        "201":
+          description: Swag
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Swag"
+  /swags/{id}:
+    get:
+      summary: Swag
+      operationId: getSwag
+      parameters:
+        - name: id
+          in: path
+          description: The unique id.
+          required: true
+          schema:
+            type: string
+      tags:
+        - Swag
+      responses:
+        "200":
+          description: Swag
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Swag"
+    put:
+      summary: Swag
+      operationId: updateSwag
+      parameters:
+        - name: id
+          in: path
+          description: The unique id.
+          required: true
+          schema:
+            type: string
+      tags:
+        - Swag
+      requestBody:
+        description: Swag
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Swag"
+      responses:
+        "204":
+          description: Swag
+    delete:
+      summary: Swag
+      operationId: deleteSwag
+      parameters:
+        - name: id
+          in: path
+          description: The unique id.
+          required: true
+          schema:
+            type: string
+      tags:
+        - Swag
+      responses:
+        "204":
+          description: Swag
+components:
+  schemas:
+    SwagListing:
+      type: array
+      items:
+        $ref: "#/components/schemas/Swag"
+    Swag:
+      type: object
+      required:
+        - name
+        - description
+        - size
+        - count
+        - owner
+        - category
+        - image
+      properties:
+        id:
+          description: Unique identifier for the Swag
+          type: string
+        name:
+          description: The name of the Swag.
+          type: string
+        description:
+          description: The description of the Swag.
+          type: string
+        size:
+          description: The size of the Swag.
+          type: string
+        count:
+          description: The count of the Swag.
+          type: string
+        owner:
+          description: The owner of the Swag.
+          type: string
+        category:
+          description: The category of the Swag.
+          type: string
+        image:
+          description: The image of the Swag.
+          type: string
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+security:
+  - BasicAuth: []
