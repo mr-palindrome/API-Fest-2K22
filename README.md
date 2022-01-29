@@ -51,6 +51,7 @@ cd API-Fest-2K22
 # Install dependencies
 npm install
 # Run the app
+cd swagexchanger
 npm start
 ```
 
