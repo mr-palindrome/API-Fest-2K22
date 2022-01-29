@@ -1,13 +1,14 @@
 openapi: 3.0.0
 info:
-  version: "1.0.0"
-  title: "Swag Exchange API"
+  version: v1.0.0
+  title: Swags
+  description: "This is an API for managing the inventory of Swags."
 servers:
-  - url: "localhost:3000"
+  - url: "https://schwagx.herokuapp.com/"
 paths:
   /swags:
     get:
-      summary: List of All Swags
+      summary: Swags
       operationId: getSwags
       tags:
         - Swag
@@ -22,7 +23,7 @@ paths:
       summary: Swag
       operationId: addSwag
       tags:
-        - Restaurant
+        - Swag
       requestBody:
         required: true
         description: Swag
@@ -37,6 +38,62 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Swag"
+  /swags/{id}:
+    get:
+      summary: Swag
+      operationId: getSwag
+      parameters:
+        - name: id
+          in: path
+          description: The unique id.
+          required: true
+          schema:
+            type: string
+      tags:
+        - Swag
+      responses:
+        "200":
+          description: Swag
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Swag"
+    put:
+      summary: Swag
+      operationId: updateSwag
+      parameters:
+        - name: id
+          in: path
+          description: The unique id.
+          required: true
+          schema:
+            type: string
+      tags:
+        - Swag
+      requestBody:
+        description: Swag
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Swag"
+      responses:
+        "204":
+          description: Swag
+    delete:
+      summary: Swag
+      operationId: deleteSwag
+      parameters:
+        - name: id
+          in: path
+          description: The unique id.
+          required: true
+          schema:
+            type: string
+      tags:
+        - Swag
+      responses:
+        "204":
+          description: Swag
 components:
   schemas:
     SwagListing:
@@ -47,29 +104,37 @@ components:
       type: object
       required:
         - name
-        - image
+        - description
+        - size
+        - count
         - owner
-        - details
-        - status
+        - category
+        - image
       properties:
         id:
-          description: Unique identifier for the swag
-          type: integer
+          description: Unique identifier for the Swag
+          type: string
         name:
           description: The name of the Swag.
           type: string
-        image:
-          description: The image url of the swag.
+        description:
+          description: The description of the Swag.
+          type: string
+        size:
+          description: The size of the Swag.
+          type: string
+        count:
+          description: The count of the Swag.
           type: string
         owner:
-          description: The Owner who owns the swag.
+          description: The owner of the Swag.
           type: string
-        details:
-          description: Details about the Swag.
+        category:
+          description: The category of the Swag.
           type: string
-        status:
-          description: Whether it is available or getting exchanged
-          type: boolean
+        image:
+          description: The image of the Swag.
+          type: string
     Error:
       type: object
       required:
